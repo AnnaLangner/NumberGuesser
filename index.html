@@ -3,17 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Number Guesser</title>
 </head>
-<body>
+<body class="bg-dark">
   <div class="container">
-    <h1>Number Guesser</h1>
-    <div id="game">
-      <p>Guess a number between <span class="min-num">1</span> and <span class="max-num">10</span></p>
-      <input type="number" id="guess-input" placeholder="Enter your guess...">
-      <input type="submit" value="submit" id="guess-value">
-      <p class="message"></p>
+    <div class="row">
+      <div class="col-md-8 mx-auto ">
+        <div class="card card-body text-center mt-3">
+          <h1 class="heading">Number Guesser</h1>
+          <div class="input-group">
+            <label class="text-info mt-3 px-4">Guess a number between 1 and 10</label>
+            <div class="input-group m-3">
+              
+              <input type="number" id="guess-input" class="form-control" placeholder="Enter your guess...">
+              <input type="submit" value="submit" id="guess-btn" class="input-group-text">            
+            </div>
+            <label class="message px-5"></label>
+          </div>
+        </div>        
+      </div>      
     </div>
   </div>
 

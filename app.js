@@ -24,12 +24,18 @@ function submitNumber() {
     failedTries += 1;   
     if (failedTries < 3) {
       messageParagraph.innerHTML = 'The numbers are not the same. Keep guessing. You still have ' + (3 - failedTries) + ' tries';
+      document.getElementById('guess-input').className = 'form-control border border-danger';
+      messageParagraph.className = 'text-danger';
     } else {
-      messageParagraph.innerHTML = 'You lose <br> Do You want play again?';
+      messageParagraph.innerHTML = 'You lose. Do You want play again?';
+      document.getElementById('guess-input').className = 'form-control border border-danger';
+      messageParagraph.className = 'text-danger';
       refreshGame();
     }
   } else {    
-    messageParagraph.innerHTML = 'You win, the numbers are the same <br> Do You want play again?';
+    messageParagraph.innerHTML = 'You win, the numbers are the same. Do You want play again?';
+    document.getElementById('guess-input').className = 'form-control border border-success';
+    messageParagraph.className = 'text-success'
     refreshGame();
   }
 }
